@@ -39,6 +39,10 @@ public class Exercícios {
 
     public static void exercicio4() {
         Scanner in = new Scanner(System.in);
+        if(!in.hasNextInt()){
+            System.out.println("Valor inválido");
+            System.exit(1);
+                    }   //validação da entrada de dados
         System.out.println("Informe o total de votos brancos");
         int votosBrancos = in.nextInt();
         System.out.println("Informe o total de votos nulos");

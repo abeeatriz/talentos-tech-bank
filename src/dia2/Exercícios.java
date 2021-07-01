@@ -5,11 +5,13 @@ import java.util.Scanner;
 public class Exercícios {
 
     public static void main(String[] args) {
-        exercicio1();              //par ou impar
-        exercicio2();              //Categorias de natação por idade
-         exercicio3a();           //Qual dos valores é menor
-        exercicio3b();         //Qual dos valores é menor
-      //   exercicio4();
+    //    exercicio1();              //par ou impar
+    //    exercicio2();              //Categorias de natação por idade
+    //     exercicio3a();           //Qual dos valores é menor
+    //    exercicio3b();         //Qual dos valores é menor
+    //    exercicio4();           //operações aritméticas entre valores previamente inseridos
+        exercicio5();              //JoKempô
+
     }
 
     public static void exercicio1() {
@@ -69,16 +71,39 @@ public class Exercícios {
 
         public static void exercicio4() {
             Scanner in = new Scanner(System.in);
-            System.out.println("Digite 1 para somar, 2 para subtrair, 3 para multiplicar e 4 para dividir");
+            System.out.println("Digite o primeiro número");
+            int x = in.nextInt();
+            System.out.println("Digite o segundo número");
+            int y = in.nextInt();
+            System.out.println("Digite 1 para somar, 2 para subtrair, 3 para multiplicar ou 4 para dividir");
             int operação = in.nextInt();
-            if( operação = 1)
-             //   sout
+            if (operação ==1 ){System.out.println("A soma dos valores é " + (x+y));}
+            else if (operação ==2 ){System.out.println("A subtração do primeiro valor pelo segundo é " + (x-y));}
+            else if (operação ==3 ){System.out.println("O produto dos valores é " + (x*y));}
+            else if (operação ==4 ){System.out.println("A divisão do primeiro valor pelo segundo resulta em "+ (x/y));}
+            else{System.out.println("Valor inválido");}   //validação da entrada de dados
+
 
 
 
         }
 
+              public static void exercicio5() {
+                  Scanner in = new Scanner(System.in);
+                  System.out.println("Primeiro jogador digite 1 para pedra,2 para papel e 3 para tesoura");
+                  int ppt1 = in.nextInt();
+                  System.out.println("Segundo jogador digite 1 para pedra,2 para papel e 3 para tesoura");
+                  int ppt2 = in.nextInt();
+                  if (ppt1==ppt2){
+                      System.out.println("Empate");}
+                  else if (ppt1==1 && ppt2==3 || ppt1==2 && ppt2==3 || ppt1==3 && ppt2=2){
+                      System.out.println("O primeiro a jogar venceu!");}
+                  else if (ppt1==1 && ppt2==2 || ppt1==2 && ppt2==1 || ppt1==3 && ppt2=1){
+                          System.out.println("O segundo a jogar venceu!");}
+                  else {System.out.println("Jogada invalida");}
 
-
+                  }
+    }
 
 }
+
