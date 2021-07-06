@@ -1,28 +1,28 @@
-package dia1;
+package dia2;
 
 import java.util.Scanner;
 
-public class Exercícios {
+public class Exercicios {
 
     public static void main(String[] args) {
-       //  exercicio1();
-       //  exercicio2();
-       //  exercicio3();
-         exercicio4();
+         exercicio1();                  //Troca de valores entre variaveis
+//         exercicio2();                //Armazenar número e retornar seu antecessor
+//         exercicio3();                //Área do retangulo
+//         exercicio4();                //Calculos de dados de eleição
     }
 
     public static void exercicio1() {
         short y = 99, z = 11, x;
         System.out.println("Antes da troca o valor armazenado em y é " + y + " e o valor armazenado em z é " + z + ".");
         x = z;        z = y;        y = x;
-        System.out.println("Depois da troca o valor armazenado em y passa a ser " + y + " e o valor armazenado em z passa a ser " + z + ".");
+        System.out.println("Depois da troca o valor armazenado em y passa a ser " + y + " e o valor armazenado em z passa a ser " + z + ".\n");
     }
 
     public static void exercicio2() {
         Scanner in = new Scanner(System.in);
         System.out.println("Digite um valor para receber o antecessor dele");
         int valor = in.nextInt();
-        System.out.println("O antecessor de " + valor + " é " + --valor + ".");
+        System.out.println("O antecessor de " + valor + " é " + --valor + ".\n");
         in.close();
     }
 
@@ -33,7 +33,7 @@ public class Exercícios {
         System.out.println("Qual a altura do retângulo?");
         double altura = in.nextDouble();
         double area = base * altura;
-        System.out.println("A área do retângulo é " + area);
+        System.out.println("A área desse retângulo corresponde a " + area+" metros quadrados.\n");
         in.close();
     }
 
@@ -43,11 +43,11 @@ public class Exercícios {
             System.out.println("Valor inválido");
             System.exit(1);
                     }   //validação da entrada de dados
-        System.out.println("Informe o total de votos brancos");
+        System.out.println("Qual foi o total de votos brancos");
         int votosBrancos = in.nextInt();
-        System.out.println("Informe o total de votos nulos");
+        System.out.println("Qual foi o total de votos nulos");
         int votosNulos = in.nextInt();
-        System.out.println("Informe o total de votos válidos");
+        System.out.println("Qual foi o total de votos válidos");
         int votosValidos = in.nextInt();
 
         int totalDeVotos = votosBrancos + votosValidos + votosNulos;
