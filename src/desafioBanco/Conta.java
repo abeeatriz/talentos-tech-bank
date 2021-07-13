@@ -158,7 +158,7 @@ public class Conta extends Cliente {
 
                                 a.setSaldo(a.saldo - valor);
                                 b.setSaldo(b.saldo + valor);
-                                System.out.println("Transferecia Concluida");
+                                System.out.println("Transferêcia Concluída");
                                 excecao = true;
                             }
 
@@ -225,7 +225,7 @@ public class Conta extends Cliente {
                             b.credito = b.credito - Math.abs(b.saldo);
                             b.saldo = 0;
                             excecao = true;
-                            System.out.println("Saque concluido com sucesso");
+                            System.out.println("Saque concluído com sucesso");
                         }
 
                     }
@@ -255,7 +255,7 @@ public class Conta extends Cliente {
 
                 if(a.senha.equals(s)){
 
-                    System.out.println("Credito Disponivel: " + a.credito);
+                    System.out.println("Crédito Disponível: " + a.credito);
 
                 }else{
 

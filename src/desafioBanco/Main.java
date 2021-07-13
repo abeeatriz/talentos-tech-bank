@@ -21,9 +21,9 @@ public class Main {
             System.out.println("2- Exibir Minha Conta");
             System.out.println("3- Depositar");
             System.out.println("4- Sacar");
-            System.out.println("5- Credito Disponivel");
+            System.out.println("5- Crédito Disponível");
             System.out.println("6- Alterar Senha");
-            System.out.println("7- Transferencia");
+            System.out.println("7- Transferência");
             System.out.println("8- Extrato");
             System.out.println("0- Sair");
             System.out.println("____________________________");
@@ -52,7 +52,7 @@ public class Main {
 
                 case 2:
 
-                    System.out.print("Digite o numero da sua conta: ");
+                    System.out.print("Digite o número da sua conta: ");
                     int numeroConta = in.nextInt();
 
                     conta = new Conta();
@@ -62,7 +62,7 @@ public class Main {
 
                 case 3:
 
-                    System.out.print("Digite o numero da conta para quem deseja depositar: ");
+                    System.out.print("Digite o número da conta para quem deseja depositar: ");
                     numeroConta = in.nextInt();
 
                     System.out.print("Digite quanto deseja depositar: ");
@@ -81,7 +81,7 @@ public class Main {
 
                 case 4:
 
-                    System.out.print("Digite o numero da conta para quem deseja Sacar: ");
+                    System.out.print("Digite o número da conta para quem deseja Sacar: ");
                     numeroConta = in.nextInt();
 
                     System.out.print("Digite o valor que deseja sacar: ");
@@ -99,7 +99,7 @@ public class Main {
 
                 case 5:
 
-                    System.out.print("Digite o numero da conta que deseja saber o credito disponivel: ");
+                    System.out.print("Digite o numero da conta que deseja saber o credito disponível: ");
                     numeroConta = in.nextInt();
 
                     for (Conta a : Conta.contas) {
@@ -119,7 +119,7 @@ public class Main {
 
                     conta = new Conta();
 
-                    System.out.print("Digite o numero da conta que deseja alterar a senha: ");
+                    System.out.print("Digite o número da conta que deseja alterar a senha: ");
                     numeroConta = in.nextInt();
 
                     System.out.print("Digite sua senha atual: ");
@@ -137,10 +137,10 @@ public class Main {
 
                     conta = new Conta();
 
-                    System.out.print("Digite o numero da sua  conta: ");
+                    System.out.print("Digite o número da sua  conta: ");
                     numeroConta = in.nextInt();
 
-                    System.out.print("Digite o numero da conta para qual deseja transferir: ");
+                    System.out.print("Digite o número da conta para qual deseja transferir: ");
                     int contaRecebedora = in.nextInt();
 
                     System.out.print("Digite o valor que deseja transferir: ");
