@@ -1,6 +1,5 @@
 package desafioBanco;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -15,16 +14,15 @@ public class Main {
 
 
         while (loop != false) {
-
+            System.out.println("UATI_BANK______feito_por_nós");
             System.out.println("___________ MENU ___________");
-            System.out.println("1- Cadastrar Cliente");
-            System.out.println("2- Exibir Minha Conta");
-            System.out.println("3- Depositar");
-            System.out.println("4- Sacar");
-            System.out.println("5- Crédito Disponível");
-            System.out.println("6- Alterar Senha");
-            System.out.println("7- Transferência");
-            System.out.println("8- Extrato");
+            System.out.println("1- Abrir conta");
+            System.out.println("2- Informações sobre minha conta");
+            System.out.println("3- Realizar depósito");
+            System.out.println("4- Fazer saque");
+            System.out.println("5- Checar crédito disponível");
+            System.out.println("6- Redefinir senha");
+            System.out.println("7- Realizar transferência");
             System.out.println("0- Sair");
             System.out.println("____________________________");
             System.out.println();
@@ -70,7 +68,7 @@ public class Main {
 
                 case 4:
 
-                    System.out.print("Digite o número da conta para quem deseja Sacar: ");
+                    System.out.print("Digite o número da conta da qual deseja sacar: ");
                     numeroConta = in.nextInt();
 
                     System.out.print("Digite o valor que deseja sacar: ");
@@ -88,7 +86,7 @@ public class Main {
 
                 case 5:
 
-                    System.out.print("Digite o numero da conta que deseja saber o credito disponível: ");
+                    System.out.print("Digite o número da sua conta para saber o crédito disponível: ");
                     numeroConta = in.nextInt();
 
                     for (Conta a : Conta.contas) {
@@ -139,34 +137,10 @@ public class Main {
 
                     break;
 
-                case 8:
-
-                    conta = new Conta();
-
-                    System.out.print("Digite o número da sua  conta: ");
-                    numeroConta = in.nextInt();
-
-                    System.out.print("Por favor digite sua senha: ");
-                    String senha = in.next();
-
-                    for (Conta a : Conta.contas) {
-
-                        if (a.getSenha().equals(senha)) {
-
-                        //    System.out.print()
-                          //  excecao = true;
-                        }
-
-                    }
-
-
-
-                    break;
-
                 case 9:
 
-                    System.out.print("Por favor digite a senha de administrador: ");
-                    senha = in.next();
+                    System.out.print("Por favor, digite a senha administrativa: ");
+                    String senha = in.next();
 
                     if (senha.equals(senhaAdmin)) {
 
@@ -180,7 +154,7 @@ public class Main {
 
                     } else {
 
-                        System.out.println("Senha de administrador incorreta");
+                        System.out.println("Senha administrativa incorreta");
 
                     }
                     break;
@@ -190,7 +164,7 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("Por favor Digite uma opção valida");
+                    System.out.println("Por favor, digite uma opção válida!\n");
                     break;
             }
 

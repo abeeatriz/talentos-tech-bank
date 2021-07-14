@@ -1,7 +1,9 @@
 package desafioBanco;
 
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Scanner;
 
-import java.util.*;
 
 public class Conta extends Cliente {
 
@@ -31,12 +33,6 @@ public class Conta extends Cliente {
     public int getNumeroConta() {
         return numeroConta;
     }
-
-    public String getTipoConta() {
-        return tipoConta;
-
-    }
-
 
     public String getSenha() {
         return senha;
@@ -86,7 +82,7 @@ public class Conta extends Cliente {
                     break;
 
                 default:
-                    System.out.println("Por favor digite uma opção valida !!!");
+                    System.out.println("Por favor digite uma opção valida !!!\n");
                     break;
             }
         } while (controle == 1);
@@ -109,13 +105,12 @@ public class Conta extends Cliente {
         String confirmaSenha = in.next();
 
         if (!senha.equals(confirmaSenha)) {
-            System.out.println("As senhas não conferem, por favor tente outra vez");
+            System.out.println("As senhas não conferem, por favor tente outra vez\n");
         } else {
             conta.senha = senha;
             contas.add(conta);
-            System.out.println("Cliente Cadastrado com sucesso!!!");
-            transacoes.add(conta.nome);
-            System.out.print(conta.toString());
+            System.out.println("Cliente Cadastrado com sucesso!!!\n");
+            System.out.println(conta.toString());
         }
 
 
@@ -135,10 +130,11 @@ public class Conta extends Cliente {
                     if (escolha == 's' || escolha == 'S') {
 
                         c.setSaldo(this.saldo + valor);
+                        System.out.println("Deposito concluído com sucesso!\n");
 
                     } else {
 
-                        System.out.println("Operação Cancelada Com Sucesso !!");
+                        System.out.println("Operação Cancelada\n");
 
                     }
 
@@ -172,7 +168,7 @@ public class Conta extends Cliente {
 
                                 a.setSaldo(a.saldo - valor);
                                 b.setSaldo(b.saldo + valor);
-                                System.out.println("Transferêcia Concluída");
+                                System.out.println("Transferêcia concluída com sucesso!\n");
                                 excecao = true;
                             }
 
@@ -186,7 +182,7 @@ public class Conta extends Cliente {
 
         if (excecao == false) {
 
-            System.out.println("Operação cancelada, verifique suas informações");
+            System.out.println("Operação cancelada, verifique suas informações\n");
 
         }
 
@@ -211,7 +207,7 @@ public class Conta extends Cliente {
 
         if (excecao == false) {
 
-            System.out.println("Operação cancelada, verifique suas informações");
+            System.out.println("Operação cancelada, verifique suas informações\n");
 
         }
 
@@ -238,7 +234,7 @@ public class Conta extends Cliente {
                             b.credito = b.credito - Math.abs(b.saldo);
                             b.saldo = 0;
                             excecao = true;
-                            System.out.println("Saque concluído com sucesso");
+                            System.out.println("Saque concluído com sucesso!\n");
                         }
 
                     }
@@ -251,7 +247,7 @@ public class Conta extends Cliente {
 
         if (excecao == false) {
 
-            System.out.println("Operação cancelada, verifique suas informações");
+            System.out.println("Operação cancelada, verifique suas informações\n");
 
         }
 
@@ -272,7 +268,7 @@ public class Conta extends Cliente {
 
                 } else {
 
-                    System.out.println("Senha Incorreta !!");
+                    System.out.println("Senha Incorreta !!\n");
 
                 }
             }
@@ -291,14 +287,14 @@ public class Conta extends Cliente {
 
                 if (a.getSenha().equals(senhaAtual)) {
 
-                    System.out.print("Por favor confirme sua nova senha: ");
+                    System.out.print("Por favor, confirme sua nova senha: ");
                     String confirmaSenha = in.next();
 
                     if (novaSenha.equals(confirmaSenha)) {
 
                         a.setSenha(confirmaSenha);
                         excecao = true;
-                        System.out.println("Senha alterada com sucesso !!!");
+                        System.out.println("Senha alterada com sucesso !!!\n");
 
                     }
 
@@ -309,12 +305,10 @@ public class Conta extends Cliente {
 
         if (excecao == false) {
 
-            System.out.println("Operação cancelada, verifique suas informações");
+            System.out.println("Operação cancelada, verifique suas informações\n");
 
         }
 
-//        public void extrato()
-//
 
     }
 
