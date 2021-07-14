@@ -1,6 +1,5 @@
 package desafioBanco;
 
-import netscape.security.UserTarget;
 
 import java.util.*;
 
@@ -24,7 +23,7 @@ public class Conta extends Cliente {
         this.saldo = saldo;
     }
 
-    public void setSenha(String senha){
+    public void setSenha(String senha) {
         this.senha = senha;
     }
 
@@ -39,11 +38,11 @@ public class Conta extends Cliente {
     }
 
 
-    public String getSenha(){
+    public String getSenha() {
         return senha;
     }
 
-    public double getSaldo(){
+    public double getSaldo() {
         return saldo;
     }
 
@@ -58,26 +57,40 @@ public class Conta extends Cliente {
                 ", SALDO CONTA = " + saldo + "\n";
     }
 
-    public void armazenaConta(int tipoConta) {
+    public void armazenaConta() {
 
+        int controle = 1;
 
-        conta = new Conta();
+        do {
+            System.out.println("Qual Tipo de Conta deseja Cadastrar ?");
+            System.out.println("____________________________");
+            System.out.println("1- Corrente");
+            System.out.println("2- Poupança");
+            System.out.println("____________________________");
+            System.out.println();
+            System.out.print("Opção: ");
+            int opc = in.nextInt();
 
-        switch (tipoConta) {
+            conta = new Conta();
 
-            case 1:
-                conta.tipoConta = "Corrente";
-                break;
+            switch (opc) {
 
-            case 2:
-                conta.tipoConta = "Poupança";
-                break;
+                case 1:
+                    conta.tipoConta = "Corrente";
+                    controle--;
+                    break;
 
-            default:
-                System.out.println("Por favor digite uma opção valida !!!");
-                break;
+                case 2:
+                    conta.tipoConta = "Poupança";
+                    controle--;
+                    break;
 
-        }
+                default:
+                    System.out.println("Por favor digite uma opção valida !!!");
+                    break;
+            }
+        } while (controle == 1);
+
 
         conta.numeroConta = random.nextInt(9999);
 
@@ -101,6 +114,7 @@ public class Conta extends Cliente {
             conta.senha = senha;
             contas.add(conta);
             System.out.println("Cliente Cadastrado com sucesso!!!");
+            transacoes.add(conta.nome);
             System.out.print(conta.toString());
         }
 
@@ -138,17 +152,17 @@ public class Conta extends Cliente {
 
     }
 
-    public void transferencia(double valor, int numeroConta, int contaRecebedora){
+    public void transferencia(double valor, int numeroConta, int contaRecebedora) {
         boolean excecao = false;
 
-        for(Conta a: Conta.contas){
+        for (Conta a : Conta.contas) {
 
-            if(a.getNumeroConta() == numeroConta) {
+            if (a.getNumeroConta() == numeroConta) {
 
                 System.out.print("Por Favor Digite sua Senha: ");
                 String senha = in.next();
 
-                if (a.senha.equals(senha)){
+                if (a.senha.equals(senha)) {
 
                     if (valor < (a.getSaldo() + a.credito)) {
 
@@ -170,7 +184,7 @@ public class Conta extends Cliente {
             }
         }
 
-        if(excecao == false){
+        if (excecao == false) {
 
             System.out.println("Operação cancelada, verifique suas informações");
 
@@ -178,7 +192,7 @@ public class Conta extends Cliente {
 
     }
 
-    public void exibirMinhaConta(int numeroConta){
+    public void exibirMinhaConta(int numeroConta) {
         boolean excecao = false;
 
         System.out.print("Por favor digite sua senha: ");
@@ -195,32 +209,31 @@ public class Conta extends Cliente {
         }
 
 
-        if(excecao == false){
+        if (excecao == false) {
 
             System.out.println("Operação cancelada, verifique suas informações");
 
         }
 
 
-
     }
 
-    public void sacar(double valor, int numeroConta){
+    public void sacar(double valor, int numeroConta) {
         boolean excecao = false;
-        for(Conta b: Conta.contas){
+        for (Conta b : Conta.contas) {
 
-            if(b.getNumeroConta() == numeroConta){
+            if (b.getNumeroConta() == numeroConta) {
 
                 System.out.print("Por Favor Digite sua Senha: ");
                 String senha = in.next();
 
-                if(b.senha.equals(senha)){
+                if (b.senha.equals(senha)) {
 
-                    if(valor < (b.getSaldo() + b.credito)){
+                    if (valor < (b.getSaldo() + b.credito)) {
 
                         b.saldo = b.saldo - valor;
 
-                        if(b.saldo < 0 && b.saldo > -500){
+                        if (b.saldo < 0 && b.saldo > -500) {
 
                             b.credito = b.credito - Math.abs(b.saldo);
                             b.saldo = 0;
@@ -236,7 +249,7 @@ public class Conta extends Cliente {
 
         }
 
-        if(excecao == false){
+        if (excecao == false) {
 
             System.out.println("Operação cancelada, verifique suas informações");
 
@@ -244,20 +257,20 @@ public class Conta extends Cliente {
 
     }
 
-    public void creditoDisponivel(int numeroConta){
+    public void creditoDisponivel(int numeroConta) {
 
-        for(Conta a: Conta.contas){
+        for (Conta a : Conta.contas) {
 
-            if(a.getNumeroConta() == numeroConta){
+            if (a.getNumeroConta() == numeroConta) {
 
                 System.out.print("Por favor digite sua senha: ");
                 String s = in.next();
 
-                if(a.senha.equals(s)){
+                if (a.senha.equals(s)) {
 
                     System.out.println("Crédito Disponível: " + a.credito);
 
-                }else{
+                } else {
 
                     System.out.println("Senha Incorreta !!");
 
@@ -268,15 +281,15 @@ public class Conta extends Cliente {
 
     }
 
-    public void alterarSenha(int numeroConta, String senhaAtual, String novaSenha){
+    public void alterarSenha(int numeroConta, String senhaAtual, String novaSenha) {
 
         boolean excecao = false;
 
-        for(Conta a: Conta.contas){
+        for (Conta a : Conta.contas) {
 
-            if(a.getNumeroConta() == numeroConta) {
+            if (a.getNumeroConta() == numeroConta) {
 
-                if(a.getSenha().equals(senhaAtual)){
+                if (a.getSenha().equals(senhaAtual)) {
 
                     System.out.print("Por favor confirme sua nova senha: ");
                     String confirmaSenha = in.next();
@@ -294,12 +307,14 @@ public class Conta extends Cliente {
 
         }
 
-        if(excecao == false){
+        if (excecao == false) {
 
             System.out.println("Operação cancelada, verifique suas informações");
 
         }
 
+//        public void extrato()
+//
 
     }
 
