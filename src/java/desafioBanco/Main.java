@@ -1,4 +1,4 @@
-package desafioBanco;
+package java.desafioBanco;
 
 import java.util.Scanner;
 

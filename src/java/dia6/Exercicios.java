@@ -1,4 +1,4 @@
-package dia6;
+package java.dia6;
 
 import java.util.Arrays;
 import java.util.Scanner;

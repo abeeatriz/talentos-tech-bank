@@ -1,4 +1,4 @@
-package dia7;
+package java.dia7;
 
 public class Desafio {
     // encontre o valor mais próximo de zero em um array de valores inteiros negativos e positivos

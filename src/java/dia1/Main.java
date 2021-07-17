@@ -1,4 +1,4 @@
-package dia1;
+package java.dia1;
 
 public class Main {
 

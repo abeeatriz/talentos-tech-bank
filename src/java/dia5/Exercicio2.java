@@ -1,4 +1,4 @@
-package dia5;
+package java.dia5;
 
 public class Exercicio2 {
 

@@ -1,4 +1,4 @@
-package dia2;
+package java.dia2;
 
 import java.util.Scanner;
 

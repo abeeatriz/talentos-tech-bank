@@ -1,4 +1,4 @@
-package desafioBanco;
+package java.desafioBanco;
 
 import java.util.HashSet;
 import java.util.Random;

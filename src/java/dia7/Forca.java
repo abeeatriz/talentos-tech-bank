@@ -1,4 +1,4 @@
-package dia7;
+package java.dia7;
 
 import java.util.ArrayList;
 import java.util.Collections;
