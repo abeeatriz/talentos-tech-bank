@@ -1,4 +1,4 @@
-package java.dia1;
+package exerciciosEmJava.dia1;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package java.desafioBanco;
+package exerciciosEmJava.desafioBanco;
 
 
 public class Cliente {

@@ -1,4 +1,4 @@
-package java.dia2;
+package exerciciosEmJava.dia2;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package java.dia7;
+package exerciciosEmJava.dia7;
 
 import java.util.ArrayList;
 import java.util.List;

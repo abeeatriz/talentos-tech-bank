@@ -1,4 +1,4 @@
-package java.dia6;
+package exerciciosEmJava.dia6;
 
 import java.util.Arrays;
 import java.util.Scanner;
