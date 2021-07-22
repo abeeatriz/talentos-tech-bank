@@ -8,9 +8,9 @@ import java.sql.Statement;
 
 public class biaDb01 {
     public static void main(String[] args) {
-        String urlPostgres = "jdbc:postgresql://talents-tech-bank.cvitjixrebr2.us-east-1.rds.amazonaws.com:5432/db_bia";
-        String usuario = "bia";
-        String senha = "***";
+        String urlPostgres = System.getenv("urlPostgres");
+        String usuario = System.getenv("usuario");
+        String senha = System.getenv("senha");
         try (
                 Connection conn = DriverManager.getConnection(urlPostgres, usuario, senha);
                 Statement stmt = conn.createStatement()) {
