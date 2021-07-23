@@ -1,4 +1,4 @@
-package postgre;
+package postgre.dia19;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
