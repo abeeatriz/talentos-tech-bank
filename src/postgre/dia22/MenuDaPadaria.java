@@ -49,25 +49,25 @@ public class MenuDaPadaria {
             switch (opc) {
 
                 case 1:
-                    String descricao;
-                    System.out.print("Insira a descrição do novo produto:");
-                    descricao = in.next();
 
-                    System.out.print("Insira o valor de custo do novo produto:");
-                    BigDecimal valor_custo = BigDecimal.valueOf(in.nextDouble());
+                    System.out.print("Insira a descrição do novo produto:");
+                    String descricao = in.next();
 
                     System.out.println("Insira o peso unitario do novo produto:");
                     BigDecimal peso_unitario = BigDecimal.valueOf(in.nextDouble());
 
-                    System.out.println("Insira o codigo de barras do novo produto:");
-                    String codigo_barras = in.next();
-
                     System.out.println("Insira a unidade medida peso do novo produto:");
                     String unidade_medida_peso = in.next();
 
+                    System.out.println("Insira o codigo de barras do novo produto:");
+                    String codigo_barras = in.next();
+
+                    System.out.print("Insira o valor de custo do novo produto:");
+                    BigDecimal valor_custo = BigDecimal.valueOf(in.nextDouble());
 
                     System.out.println("Insira o valor de venda do novo produto:");
                     BigDecimal valor_venda = BigDecimal.valueOf(in.nextDouble());
+
 
 
                     // Cadastrei um novo produto
