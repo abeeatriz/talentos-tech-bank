@@ -89,8 +89,11 @@ public class MenuDaPadaria {
                     int finalizar_compra = 0;
 
                     do {
-                        System.out.println("insira o código de barras do produto: ");
+                        System.out.println("Insira o código de barras ou a descrição do produto: ");
                         codigo_barras = in.next();
+
+                        System.out.println("Insira a quantidade de produtos: ");
+                        int quantidade_de_produto = Integer.parseInt(in.next());
 
                         // Busquei um produto por código de barras
                         List<Produto> resultadoBuscaProdutos = Produto.buscarProdutos(produtoDao, codigo_barras);
@@ -99,7 +102,7 @@ public class MenuDaPadaria {
                         // Criei um novo item venda
                         ItemVenda item = new ItemVenda();
                         item.setProduto(produtoEncontrado);
-                        item.setQuantidade(BigDecimal.valueOf(300));
+                        item.setQuantidade(BigDecimal.valueOf(quantidade_de_produto));
 
                         v.adicionarItemNaVenda(itemVendaDao, item);
 
