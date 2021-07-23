@@ -37,7 +37,7 @@ public class MenuDaPadaria {
             System.out.println("**Padaria Quinta Pá Sexta**");
             System.out.println("**************************");
             System.out.println("1 - Cadastrar novo produto");
-            System.out.println("2 - Inicializar nova venda");
+            System.out.println("2 - Realizar venda");
             System.out.println("0 - Finalizar");
 
 
