@@ -5,7 +5,7 @@ Trilha Java
 
 
 ## 1° Semana - Lógica de programação
-- **Dia 1** - Aula introdutória
+  - Aula introdutória
   - Apresentação do curso
   - Apresentação da turma
   - Apresentação da ementa
@@ -17,16 +17,16 @@ Trilha Java
     - Enviar primeiro commit para o GitHub
   - Preparando o Java
   - Preparando o Intellij
-- **Dia 2** - Introdução a algoritmos
-- **Dia 2** - Conceitos de variáveis
-- **Dia 3** - Estruturas de controle - IF Else (Switch caso todos entendam)
-- **Dia 4/5** - Estrutura de controle/repetição - While Do While
-- **Dia 4/5** - Estrutura de controle/repetição - For ForEach
-- **Dia 6** - GIT & Projeto Prático - Exercícios de fixação (for, while, if, variáveis)
+  - Introdução a algoritmos
+  - Conceitos de variáveis
+  - Estruturas de controle - IF Else (Switch caso todos entendam)
+  - Estrutura de controle/repetição - While Do While
+  - Estrutura de controle/repetição - For ForEach
+  - GIT & Projeto Prático - Exercícios de fixação (for, while, if, variáveis)
 
 ## 2° Semana - POO (Programação orientada a objetos)
-- **Dia 7** - Arrays e ArrayList
-- **Dia 7** - Introdução a paradigmas de programação
+- Arrays e ArrayList
+- Introdução a paradigmas de programação
 - Classes e Objetos
 - Composição e encapsulamento
 - Classes e métodos estáticos
