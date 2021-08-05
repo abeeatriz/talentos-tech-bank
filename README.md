@@ -51,7 +51,7 @@ Trilha Java
 - Introdução ao Spring MVC
 - REST APIs
 - Criando um projeto hands on do Spring até o Banco de Dados
-- Projeto final hands on em grupo
+- Projeto final hands on em grupo( https://github.com/abeeatriz/tech-talents-bank-padaria )
 
 
 ## Links úteis
